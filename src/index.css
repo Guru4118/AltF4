@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --background: 0 0% 100%;
+    --foreground: 30 13% 9%;
+    --card: 0 0% 100%;
+    --card-foreground: 30 13% 9%;
+    --primary: 14 80% 54%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 27% 96%;
+    --secondary-foreground: 30 13% 12%;
+    --muted: 40 20% 96%;
+    --muted-foreground: 25 8% 38%;
+    --accent: 18 100% 96%;
+    --accent-foreground: 14 80% 40%;
+    --border: 30 14% 90%;
+    --input: 30 12% 86%;
+    --ring: 14 80% 54%;
+    --brand: 14 80% 54%;
+    --canvas: 40 29% 96%;
+    --radius: 0.75rem;
+  }
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-size: 16px;
+    line-height: 26px;
+    overflow-x: hidden;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
