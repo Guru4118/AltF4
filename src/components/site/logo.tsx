@@ -8,7 +8,7 @@ export function Logo({ className }: { className?: string }) {
         <i className="rounded-[2px] bg-white/55" /><i className="rounded-[2px] bg-white" />
       </span>
       <span className="flex flex-col leading-none">
-        <span className="text-[16px] font-extrabold tracking-[-.055em] text-foreground">NG<span className="text-primary"></span></span>
+        <span className="text-[16px] font-extrabold tracking-[-.055em] text-foreground">AltF4<span className="text-primary">.</span></span>
         <span className="mt-1 text-[9px] font-bold uppercase tracking-[.22em] text-muted-foreground">Studios</span>
       </span>
     </a>
