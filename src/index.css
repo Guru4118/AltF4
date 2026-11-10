@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --background: 96 24% 96%;
+    --foreground: 162 41% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 162 41% 16%;
+    --primary: 163 42% 24%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 120 19% 89%;
+    --secondary-foreground: 162 41% 16%;
+    --muted: 120 19% 89%;
+    --muted-foreground: 158 12% 39%;
+    --accent: 149 21% 55% / 0.14;
+    --accent-foreground: 163 42% 24%;
+    --border: 155 15% 83%;
+    --input: 155 15% 78%;
+    --ring: 163 42% 24%;
+    --brand: 163 42% 24%;
+    --canvas: 120 19% 89%;
+    --radius: 0.9rem;
+    --forest: #245849;
+    --sage: #75A48C;
+    --ink: #18392F;
+    --paper: #F4F7F2;
+    --pale: #DFE9DF;
+  }
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-size: 16px;
+    line-height: 1.65;
+    overflow-x: hidden;
+    background-image: radial-gradient(rgba(36,88,73,.055) .7px, transparent .7px);
+    background-size: 18px 18px;
+  }
+  h1, h2, h3, h4 { font-family: 'Manrope', 'DM Sans', sans-serif; }
+  ::selection { background: #75A48C; color: #18392F; }
+  a, button { -webkit-tap-highlight-color: transparent; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    .animate-marquee, .animate-float, .animate-pulse-ring { animation: none !important; }
+  }
+}
+
+@layer components {
+  .container { width: min(100% - 2.5rem, 1180px); margin-inline: auto; }
+  .section-kicker { @apply inline-flex items-center gap-2 rounded-full border border-primary/15 bg-white/75 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[.18em] text-primary; }
+  .section-title { @apply text-balance text-4xl font-extrabold leading-[1.06] tracking-[-.045em] sm:text-5xl lg:text-[3.55rem]; }
+  .soft-panel { background: linear-gradient(145deg, rgba(255,255,255,.94), rgba(223,233,223,.72)); border: 1px solid rgba(36,88,73,.12); box-shadow: 0 24px 70px -48px rgba(24,57,47,.42); }
+}
